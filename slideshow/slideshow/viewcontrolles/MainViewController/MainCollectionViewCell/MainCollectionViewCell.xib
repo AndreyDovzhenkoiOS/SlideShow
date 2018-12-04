@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="SlideShow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="152"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ma-Vc-Frv">
+                        <rect key="frame" x="7" y="4" width="260" height="144"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectRightImage" translatesAutoresizingMaskIntoConstraints="NO" id="QZF-QU-roM">
+                        <rect key="frame" x="16" y="114" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="QZF-QU-roM" secondAttribute="height" id="knP-MW-iud"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectLeftImage" translatesAutoresizingMaskIntoConstraints="NO" id="xTG-Z5-rGc">
+                        <rect key="frame" x="236" y="16" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xTG-Z5-rGc" secondAttribute="height" id="Jgd-de-xZM"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-y7-Bgq">
+                        <rect key="frame" x="110" y="49" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="1fb-y7-Bgq" secondAttribute="height" id="Inh-Ow-LJZ"/>
+                        </constraints>
+                    </activityIndicatorView>
+                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8jV-DX-WCm">
+                        <rect key="frame" x="7" y="4" width="260" height="144"/>
+                        <color key="backgroundColor" white="1" alpha="0.32882018008474578" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QZF-QU-roM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="1W7-zC-Ut5"/>
+                <constraint firstItem="8jV-DX-WCm" firstAttribute="height" secondItem="8ma-Vc-Frv" secondAttribute="height" id="4oC-wf-2Gv"/>
+                <constraint firstItem="8ma-Vc-Frv" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="7Wx-gU-4aA"/>
+                <constraint firstItem="xTG-Z5-rGc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="8MN-yA-A3t"/>
+                <constraint firstItem="1fb-y7-Bgq" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="AQK-8V-HMI"/>
+                <constraint firstItem="8jV-DX-WCm" firstAttribute="width" secondItem="8ma-Vc-Frv" secondAttribute="width" id="BDi-hM-MUe"/>
+                <constraint firstAttribute="trailing" secondItem="xTG-Z5-rGc" secondAttribute="trailing" constant="16" id="E4P-IT-9RS"/>
+                <constraint firstItem="QZF-QU-roM" firstAttribute="height" secondItem="xTG-Z5-rGc" secondAttribute="height" id="EzM-1j-VJo"/>
+                <constraint firstItem="xTG-Z5-rGc" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.08" id="HRY-A6-WdZ"/>
+                <constraint firstItem="QZF-QU-roM" firstAttribute="width" secondItem="xTG-Z5-rGc" secondAttribute="width" id="HjC-sM-7ID"/>
+                <constraint firstAttribute="bottom" secondItem="QZF-QU-roM" secondAttribute="bottom" constant="16" id="Hu5-Wr-JSU"/>
+                <constraint firstItem="8jV-DX-WCm" firstAttribute="centerX" secondItem="8ma-Vc-Frv" secondAttribute="centerX" id="LEW-YM-0xD"/>
+                <constraint firstItem="QZF-QU-roM" firstAttribute="width" secondItem="QZF-QU-roM" secondAttribute="height" id="Q4w-Gk-Z8V"/>
+                <constraint firstItem="8ma-Vc-Frv" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="TOt-WW-gt9"/>
+                <constraint firstItem="1fb-y7-Bgq" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="kZF-J5-zfw"/>
+                <constraint firstItem="1fb-y7-Bgq" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.2" id="l4A-eg-9lM"/>
+                <constraint firstItem="8ma-Vc-Frv" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.95" id="lop-c2-Ck1"/>
+                <constraint firstItem="8jV-DX-WCm" firstAttribute="centerY" secondItem="8ma-Vc-Frv" secondAttribute="centerY" id="n6Y-02-BJm"/>
+                <constraint firstItem="8ma-Vc-Frv" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.95" id="zvR-5P-sHx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="274" height="152"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="1fb-y7-Bgq" id="UzI-gO-LqA"/>
+                <outlet property="blurView" destination="8jV-DX-WCm" id="SRY-1o-jHi"/>
+                <outlet property="imageView" destination="8ma-Vc-Frv" id="Frc-Gv-0II"/>
+                <outletCollection property="selectImageViews" destination="QZF-QU-roM" collectionClass="NSMutableArray" id="AJ9-IU-8yK"/>
+                <outletCollection property="selectImageViews" destination="xTG-Z5-rGc" collectionClass="NSMutableArray" id="Lup-wO-yXv"/>
+            </connections>
+            <point key="canvasLocation" x="89" y="69"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="selectLeftImage" width="256" height="256"/>
+        <image name="selectRightImage" width="256" height="256"/>
+    </resources>
+</document>

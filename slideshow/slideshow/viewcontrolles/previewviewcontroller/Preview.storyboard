@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview View Controller-->
+        <scene sceneID="rcK-bE-fgc">
+            <objects>
+                <viewController storyboardIdentifier="PreviewViewController" id="ohV-tg-uwE" customClass="PreviewViewController" customModule="SlideShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AGv-ne-Sqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4py-fm-Jge">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="610.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X01-ke-tdJ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ohV-tg-uwE" id="73u-Jo-FF9"/>
+                                    <outlet property="delegate" destination="ohV-tg-uwE" id="uhj-1u-HFg"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlP-vY-4iO">
+                                <rect key="frame" x="0.0" y="610.5" width="375" height="56.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.67970405190000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Slide Show">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="slideShowAction:" destination="ohV-tg-uwE" eventType="touchUpInside" id="Qff-25-HyD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DlP-vY-4iO" firstAttribute="trailing" secondItem="Hr5-X3-dMy" secondAttribute="trailing" id="5bG-lc-ZdG"/>
+                            <constraint firstItem="Hr5-X3-dMy" firstAttribute="bottom" secondItem="DlP-vY-4iO" secondAttribute="bottom" id="76H-f5-nLv"/>
+                            <constraint firstItem="4py-fm-Jge" firstAttribute="leading" secondItem="Hr5-X3-dMy" secondAttribute="leading" id="8Is-6p-bvq"/>
+                            <constraint firstItem="4py-fm-Jge" firstAttribute="trailing" secondItem="Hr5-X3-dMy" secondAttribute="trailing" id="8bw-a5-4Gu"/>
+                            <constraint firstItem="4py-fm-Jge" firstAttribute="top" secondItem="AGv-ne-Sqs" secondAttribute="top" id="PNA-bD-kw5"/>
+                            <constraint firstItem="DlP-vY-4iO" firstAttribute="top" secondItem="4py-fm-Jge" secondAttribute="bottom" id="gWS-QS-kbe"/>
+                            <constraint firstItem="DlP-vY-4iO" firstAttribute="leading" secondItem="Hr5-X3-dMy" secondAttribute="leading" id="gg1-Z9-C9Z"/>
+                            <constraint firstItem="DlP-vY-4iO" firstAttribute="height" secondItem="AGv-ne-Sqs" secondAttribute="height" multiplier="0.085" id="zmm-uF-DGc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hr5-X3-dMy"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4py-fm-Jge" id="h6i-Zg-8zJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyQ-yn-o2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="154.27286356821591"/>
+        </scene>
+    </scenes>
+</document>

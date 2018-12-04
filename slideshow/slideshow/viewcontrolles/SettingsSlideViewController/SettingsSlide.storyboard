@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Slide View Controller-->
+        <scene sceneID="hec-U2-XG1">
+            <objects>
+                <viewController storyboardIdentifier="SettingsSlideViewController" id="XWG-d5-RLg" customClass="SettingsSlideViewController" customModule="SlideShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jb7-WP-8kI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-pZ-pNB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPw-QC-182">
+                                <rect key="frame" x="0.0" y="600" width="375" height="66.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mt3-9g-hfW">
+                                <rect key="frame" x="10" y="133" width="355" height="267"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JNu-Ul-PmJ">
+                                <rect key="frame" x="9.5" y="413.5" width="356.5" height="187"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sh0-ox-ze9">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XWG-d5-RLg" id="mYv-re-mq7"/>
+                                    <outlet property="delegate" destination="XWG-d5-RLg" id="Mse-8M-DtN"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZH-kR-VG0">
+                                <rect key="frame" x="75" y="601" width="225" height="50"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.68235294120000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitAction:" destination="XWG-d5-RLg" eventType="touchUpInside" id="Pz4-iF-g47"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="lZH-kR-VG0" firstAttribute="height" secondItem="Jb7-WP-8kI" secondAttribute="height" multiplier="0.075" id="1PR-Bt-Xyf"/>
+                            <constraint firstAttribute="trailing" secondItem="TPw-QC-182" secondAttribute="trailing" id="1Sd-0R-2ug"/>
+                            <constraint firstItem="TPw-QC-182" firstAttribute="height" secondItem="Jb7-WP-8kI" secondAttribute="height" multiplier="0.1" id="9Zc-AE-ncd"/>
+                            <constraint firstItem="mt3-9g-hfW" firstAttribute="width" secondItem="Jb7-WP-8kI" secondAttribute="width" multiplier="0.95" id="Kxn-Vv-Q3K"/>
+                            <constraint firstItem="mt3-9g-hfW" firstAttribute="centerX" secondItem="CVQ-cr-opX" secondAttribute="centerX" id="LJA-EB-Lar"/>
+                            <constraint firstItem="TPw-QC-182" firstAttribute="top" secondItem="JNu-Ul-PmJ" secondAttribute="bottom" id="RyY-Dr-tfg"/>
+                            <constraint firstItem="JNu-Ul-PmJ" firstAttribute="centerX" secondItem="CVQ-cr-opX" secondAttribute="centerX" id="XUG-he-sv4"/>
+                            <constraint firstItem="TPw-QC-182" firstAttribute="bottom" secondItem="CVQ-cr-opX" secondAttribute="bottom" id="YC6-aL-xm4"/>
+                            <constraint firstItem="b6Y-pZ-pNB" firstAttribute="trailing" secondItem="CVQ-cr-opX" secondAttribute="trailing" id="Z6k-SZ-Uwq"/>
+                            <constraint firstItem="b6Y-pZ-pNB" firstAttribute="height" secondItem="Jb7-WP-8kI" secondAttribute="height" multiplier="0.2" id="Zk9-lK-f4N"/>
+                            <constraint firstItem="mt3-9g-hfW" firstAttribute="height" secondItem="Jb7-WP-8kI" secondAttribute="height" multiplier="0.4" id="aca-EC-FRD"/>
+                            <constraint firstItem="TPw-QC-182" firstAttribute="leading" secondItem="CVQ-cr-opX" secondAttribute="leading" id="auJ-vy-UPg"/>
+                            <constraint firstItem="JNu-Ul-PmJ" firstAttribute="width" secondItem="Jb7-WP-8kI" secondAttribute="width" multiplier="0.95" id="e1T-GT-EDe"/>
+                            <constraint firstItem="lZH-kR-VG0" firstAttribute="centerX" secondItem="CVQ-cr-opX" secondAttribute="centerX" id="gYI-6S-PEs"/>
+                            <constraint firstItem="mt3-9g-hfW" firstAttribute="top" secondItem="b6Y-pZ-pNB" secondAttribute="bottom" id="h8y-rv-rVG"/>
+                            <constraint firstItem="CVQ-cr-opX" firstAttribute="bottom" secondItem="lZH-kR-VG0" secondAttribute="bottom" constant="16" id="m94-Eu-HQ0"/>
+                            <constraint firstItem="b6Y-pZ-pNB" firstAttribute="leading" secondItem="CVQ-cr-opX" secondAttribute="leading" id="noO-IK-Tcm"/>
+                            <constraint firstItem="JNu-Ul-PmJ" firstAttribute="height" secondItem="Jb7-WP-8kI" secondAttribute="height" multiplier="0.28" id="pub-Sz-zhk"/>
+                            <constraint firstItem="b6Y-pZ-pNB" firstAttribute="top" secondItem="Jb7-WP-8kI" secondAttribute="top" id="q01-t3-ZKj"/>
+                            <constraint firstItem="lZH-kR-VG0" firstAttribute="width" secondItem="Jb7-WP-8kI" secondAttribute="width" multiplier="0.6" id="zev-8c-ecl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CVQ-cr-opX"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JNu-Ul-PmJ" id="mpY-f7-9AH"/>
+                        <outlet property="exitButton" destination="lZH-kR-VG0" id="uDN-Xc-Y0W"/>
+                        <outlet property="imageView" destination="mt3-9g-hfW" id="6Ax-CQ-3oq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjS-NO-l51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="175.86206896551727"/>
+        </scene>
+    </scenes>
+</document>
